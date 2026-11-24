@@ -1,0 +1,36 @@
+Committed source manifest: 108 entries; mismatches: []
+Saved matrix keys: ['viewports', 'states', 'cases', 'failures']
+Saved matrix viewports count 3
+First item keys ['name', 'width', 'height']
+Saved matrix states count 53
+First item keys ['name', 'url', 'role']
+Saved matrix cases count 159
+First item keys ['state', 'viewport', 'url', 'file', 'overflowX', 'layout', 'defects', 'problems']
+Saved matrix failures count 0
+Remote PR3 open True 08954c0366c1dd5aa5bce50a68725498addb9a15 feat/demo-role-picker
+Saved matrix case distribution {'desktop': 53, 'tablet': 53, 'mobile': 53}
+Saved matrix nonempty defects 0
+Saved matrix nonempty problems 0
+Historical comprehensive-cycle evidence:
+Independent before/after visual QA - t_004b1565
+  Fresh independent copy: /home/boh/react-native-dev/bachelor-thesis/.worktrees/t_004b1565. 108 source/test files were copied and SHA256-verified before execution. source-manifest.json identifies exact bytes approved; publisher must preserve/reverify them.
+Independent fresh execution
+  CHROMIUM_PATH=/home/boh/.cache/ms-playwright/chromium-1243/chrome-linux64/chrome MATRIX_PORT=3371 node tests/layout-matrix.cjs
+  Exit0;159/159 cases captured;53 distinct page/UI states at each of desktop1440x1000, tablet834x1112, mobile390x844. Zero geometry defects, zero console/page/HTTP>=400/request-failed/external-request problems, zero document-overflow cases.
+  Assertions evaluated initial, bottom-scrolled and toggled states: sidebar shell/viewport coverage, sticky top, link reachability, mandatory populated Gantt on detail routes, bars/header, top inset, grid extent, real horizontal timeline/table scroll reachability. All actual159 screenshots present, unique case keys verified programmatically.
+  Frozen pre-correction CSS matrix:100 cases with sidebar-shell gap;33 with Gantt top inset;1 with document horizontal overflow. Categories overlap, not a summed total of affected cases.
+  Fresh final matrix:0 in each category. Original purple milestone bars and time-range controls retained. Wide Gantt timeline is deliberately internally scrollable; date/bar cuts at viewport edges are not irreversible clipping. Fund-detail mobile expanded-sidebar TRL table now stays within a bounded scroll container.
+  pairs.json:159 correction-before / fresh-after pairs with absolute paths, state and viewport.
+  index.html:portable side-by-side browser index of all159 correction pairs and51 original pairs. Full source-resolution images are included in the evidence ZIP.
+  Overview sheets overview-{desktop,tablet,mobile}-{1,2,3}.jpg:all159 before/after thumbnail pairs inspected. Thumbnail overview is not a claim that every tiny glyph was manually audited.
+  Apparent original stakeholder rating difference7.8 vs fresh4 on tablet was investigated: unchanged investor.ts rating GET computes and persists ratingTotal via updateRatingTotal. The original capture visits rating between viewports; the fresh matrix runs portfolio before rating. This is pre-existing stateful capture ordering, not a CSS/calculation regression. Screenshots are not asserted to have identical seed lifecycle state across both different capture harnesses.
+Upstream independent regression execution (t_1e30c3f7)
+  6 npx prettier --check public/css/theme.css public/js/chart-theme.js tests/layout-geometry.cjs tests/layout-matrix.cjs tests/layout-model-fixture.cjs tests/summarize-layout.cjs tests/run-layout-verification.cjs ../scraper/tests/tsconfig-contract.json -pass
+  Additional upstream node tests/independent-qa.cjs -15 keyboard/chart cases pass; all3 credential Tab sequences email→password→submit,4-role keyboard reachability at3 viewports, initialized nonzero canvases and finite datasets. Upstream independent full159-case matrix also passes.
+  The headless execute_code helper was blocked by approval policy in this run; it did not execute and was not needed. Ordinary approved file scripts and terminal execution produced the real results. No review provider was fabricated or unavailable for the performed image-tool review.
+  Include this report and portable paired image evidence in PR3 summary while preserving existing body. Independent regression and visual gates now approve these exact local bytes. Verify actual published SHA/body/artifact URLs and configured checks; do not merge or restart the sandbox service.
+Remote asset dashboard/qa/pr3-reviewed/images/pairs/after/login-mobile.png PNG True matches commit True
+Remote asset dashboard/qa/pr3-reviewed/images/pairs/after/startup-gantt-year-desktop.png PNG True matches commit True
+Remote asset dashboard/qa/pr3-reviewed/images/pairs/after/fund-detail-nav-toggle-mobile.png PNG True matches commit True
+ERP local branch none
+ERP remote branch none
